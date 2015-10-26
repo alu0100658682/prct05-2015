@@ -1,4 +1,0 @@
-desc "Ejecutar suma 1"
-task :simple do
-  sh "ruby -I. test/tc_point.rb -n /simple/"
-end
