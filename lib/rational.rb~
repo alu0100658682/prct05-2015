@@ -1,5 +1,5 @@
 
-require "./gcd.rb"
+require './lib/gcd'
 
 class Rational
   
@@ -14,12 +14,32 @@ class Rational
     "#{@numerador}/#{@denominador}"
   end
     
-  
-  
-  
+  def +(other)                
+        
+    if (@denominador == other.denominador )    
+      
+      nume=@numerador + other.numerador      
+      deno=@denominador      
+      mcd=gcd(nume,deno)
+      
+    else
+    
+      aux= @denominador * other.denominador      
+      nume = ((aux / @denominador ) * @numerador) + ((aux / other.denominador ) * other.numerador)      
+      deno = @denominador*other.denominador      
+      mcd=gcd(nume,deno)
+	
+    end		
+    
+    temp = Rational.new(nume/mcd, deno/mcd)
+        
+  end        
   
 end
   
 
-temp = Rational.new(2,4)
-temp.to_s
+
+f1 = Rational.new(2,4)
+f2 = Rational.new(3,7)
+puts (f1+f2).to_s
+
