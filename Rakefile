@@ -1,6 +1,11 @@
-task :default => :suma
+task :default
 
-desc "Ejecutar suma 1"
-task :suma do
-  sh "ruby -I. test/tc_rational.rb"
+desc "Ejecutar suma"
+task :default do
+  sh "ruby -I. ./test/tc_rational.rb"
+end
+
+desc "Nada"
+task :na do
+  
 end
