@@ -34,6 +34,27 @@ class Rational
     temp = Rational.new(nume/mcd, deno/mcd)
         
   end        
+
+def -(other)                
+        
+    if (@denominador == other.denominador )    
+      
+      nume=@numerador - other.numerador      
+      deno=@denominador      
+      mcd=gcd(nume,deno)
+      
+    else
+    
+      aux= @denominador * other.denominador      
+      nume = ((aux / @denominador ) * @numerador) - ((aux / other.denominador ) * other.numerador)      
+      deno = @denominador*other.denominador      
+      mcd=gcd(nume,deno)
+	
+    end		
+    
+    temp = Rational.new(nume/mcd, deno/mcd)
+        
+  end       
   
 end
   

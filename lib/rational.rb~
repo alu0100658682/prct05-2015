@@ -1,5 +1,5 @@
 
-require '../lib/gcd'
+require './lib/gcd'
 
 class Rational
   
