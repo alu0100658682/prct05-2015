@@ -1,5 +1,5 @@
 
-require './lib/gcd'
+require '../lib/gcd'
 
 class Rational
   
@@ -55,6 +55,14 @@ def -(other)
     temp = Rational.new(nume/mcd, deno/mcd)
         
   end       
+
+def*(other)
+
+	#temp = Rational.new((@numerador * other.numerador), (@denominador * other.denominador)) FALTA SIMPLIFICAR
+	 
+
+end
+
   
 end
   
@@ -62,5 +70,5 @@ end
 
 f1 = Rational.new(2,4)
 f2 = Rational.new(3,7)
-puts (f1+f2).to_s
+puts (f1*f2).to_s
 
