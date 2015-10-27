@@ -15,6 +15,11 @@ task :suma do
 end
 
 desc "Ejecutar resta"
-task :suma do
+task :resta do
   sh "ruby -I. ./test/tc_rational.rb -n /test_resta/"
+end
+
+desc "Ejecutar producto"
+task :producto do
+  sh "ruby -I. ./test/tc_rational.rb -n /test_producto/"
 end

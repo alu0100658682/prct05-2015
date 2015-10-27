@@ -18,3 +18,8 @@ desc "Ejecutar resta"
 task :resta do
   sh "ruby -I. ./test/tc_rational.rb -n /test_resta/"
 end
+
+desc "Ejecutar producto"
+task :producto do
+  sh "ruby -I. ./test/tc_rational.rb -n /test_producto/"
+end
