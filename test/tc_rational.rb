@@ -1,7 +1,4 @@
-
 require './lib/rational'
-# require '../lib/gcd'
-
 require 'test/unit'
 
 class TestRacional < Test::Unit::TestCase
@@ -26,6 +23,9 @@ class TestRacional < Test::Unit::TestCase
      
   end
 
+  def test_division
 
-  
+     assert_equal("7/6", (Rational.new(2,4) / Rational.new(3,7)).to_s)      
+     
+  end  
 end
