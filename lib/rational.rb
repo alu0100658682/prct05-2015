@@ -56,15 +56,25 @@ def -(other)
         
   end       
 
-def *(other)
+  def *(other)
 
 	#temp = Rational.new((@numerador * other.numerador), (@denominador * other.denominador)) FALTA SIMPLIFICAR
-	nume = @numerador * other.numerador
-        deno = @denominador * other.denominador
+	
+		nume = @numerador * other.numerador    
+		deno = @denominador * other.denominador
         mcd=gcd(nume,deno)
         temp = Rational.new(nume / mcd ,deno / mcd )
 	 
-end
+  end
+  
+  def /(other)
+		
+		nume = @numerador * other.denominador
+		deno = @denominador * other.numerador
+        mcd=gcd(nume,deno)
+        temp = Rational.new(nume / mcd ,deno / mcd )
+	 
+  end
 
   
 end
